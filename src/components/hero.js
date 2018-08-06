@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Title } from './typography/title'
 import { Subtitle } from './typography/subtitle'
+import { HeroIcon } from './content/hero-icon'
+import { LINKS } from '../consts'
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -13,6 +15,10 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 509px) {
+    height: calc(65vh - 107px);
+  }
 `
 
 export const Hero = () => (
@@ -20,10 +26,10 @@ export const Hero = () => (
     <Title>Jason Werner</Title>
     <Subtitle>Full-Stack Developer</Subtitle>
     <div>
-      <i style={{ marginLeft: 18, marginRight: 18, color: '#fff' }} className="fab fa-github"></i>
-      <i style={{ marginLeft: 18, marginRight: 18, color: '#fff' }} className="fab fa-linkedin-in"></i>
-      <i style={{ marginLeft: 18, marginRight: 18, color: '#fff' }} className="fab fa-medium-m"></i>
-      <i style={{ marginLeft: 18, marginRight: 18, color: '#fff' }} className="fab fa-twitter"></i>
+      <HeroIcon icon="fab fa-github" link={LINKS.github} />
+      <HeroIcon icon="fab fa-linkedin-in" link={LINKS.linkedin} />
+      <HeroIcon icon="fab fa-medium-m" link={LINKS.medium} />
+      <HeroIcon icon="fab fa-twitter" link={LINKS.twitter} />
     </div>
   </Wrapper>
 )
