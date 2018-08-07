@@ -4,6 +4,11 @@ import { HeaderTitle } from './header-title'
 import { HeaderItem } from './header-item'
 import { HeaderItemList } from './header-item-list'
 
+const headerItems = [
+  { name: 'HOME', path: '/' },
+  // { name: 'CONTACT', path: '/contact' },
+]
+
 const Wrapper = styled.div`
   background-color: rgba(0,0,0,0.04);
   margin-bottom: 1.45rem;
@@ -18,8 +23,9 @@ export const Header = ({ siteTitle, path }) => (
     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
       <HeaderTitle label={siteTitle} />
       <HeaderItemList>
-        <HeaderItem label="HOME" active={path === '/'} to={'/'} />
-        <HeaderItem label="CONTACT" active={path === '/contact'} to={'/contact'} />
+        {headerItems.map(item => (
+          <HeaderItem label={item.name} active={path === item.path} to={item.path} />
+        ))}
       </HeaderItemList>
     </div>
   </Wrapper>
