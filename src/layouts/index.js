@@ -7,7 +7,7 @@ import { Header } from '../components/header/header'
 import theme from '../theme'
 import './index.css'
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, data, location }) => (
   <ThemeProvider theme={theme}>
     <div>
       <Helmet
@@ -18,7 +18,7 @@ const Layout = ({ children, data }) => (
           // { href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', rel: 'stylesheet', integrity: 'sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin: 'anonymous' },
         ]}
       />
-      <Header siteTitle="TRXRG" />
+      <Header siteTitle="TRXRG" path={location.pathname} />
       <div>{children()}</div>
     </div>
   </ThemeProvider>

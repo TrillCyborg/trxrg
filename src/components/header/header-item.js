@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 import { HeaderItem as Font } from '../typography/header-item'
 
 const Wrapper = styled.div`
@@ -18,12 +19,14 @@ const ActiveLine = styled.div`
   height: 2px;
   background-color: #6202EE;
   position: relative;
-  top: 31px;
+  top: 25px;
 `
 
-export const HeaderItem = ({ label, active, onClick }) => (
-  <Wrapper onClick={onClick}>
-    <Font style={{ marginTop: active ? 2 : 0 }}>{label}</Font>
+export const HeaderItem = ({ label, active, to }) => (
+  <Wrapper>
+    <Link style={{ textDecoration: 'none', marginTop: active ? 2 : 0 }} activeStyle={{ textDecoration: 'none' }} to={to}>
+      <Font>{label}</Font>
+    </Link>   
     {active ? <ActiveLine /> : null}
   </Wrapper>
 )

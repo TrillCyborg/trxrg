@@ -13,13 +13,13 @@ const Wrapper = styled.div`
   }
 `
 
-export const Header = ({ siteTitle }) => (
+export const Header = ({ siteTitle, path }) => (
   <Wrapper>
     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
       <HeaderTitle label={siteTitle} />
       <HeaderItemList>
-        <HeaderItem label="HOME" active />
-        <HeaderItem label="CONTACT" />
+        <HeaderItem label="HOME" active={path === '/'} to={'/'} />
+        <HeaderItem label="CONTACT" active={path === '/contact'} to={'/contact'} />
       </HeaderItemList>
     </div>
   </Wrapper>
