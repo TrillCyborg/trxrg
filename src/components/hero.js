@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   @media (max-width: 509px) {
     // height: calc(65vh - 107px);
     
-    height: 65vh;
+    height: 55vh;
     margin-bottom: 100px;
     justify-content: flex-end;
   }
