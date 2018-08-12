@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { FooterItem as Font } from '../typography/footer-item'
 
-const Link = styled.a`
+
+const Link = styled(OutboundLink)`
   display: flex;
   flex-direction: row;
   align-items: center;

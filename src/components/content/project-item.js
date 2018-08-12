@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-const Wrapper = styled.a`
+const Wrapper = styled(OutboundLink)`
   margin: 45px 24px;
   max-width: 1012px;
   border-radius: 8px;
