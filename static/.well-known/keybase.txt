@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/trillcyborg
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://trxrg.com
+  * I am trillcyborg (https://keybase.io/trillcyborg) on keybase.
+  * I have a public key ASAafvLorerYGXWLe-YI7_URsA4XK7D-4aaaErxD49NMGgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120a9c76ae706a24ddf06d58f3d083490dcaac8f4346454e01f82f45ff37bc063a70a",
+      "host": "keybase.io",
+      "kid": "01201a7ef2e8adead819758b7be608eff511b00e172bb0fee1a69a12bc43e3d34c1a0a",
+      "uid": "f8a80836b859961a8016a74d2d0fdc19",
+      "username": "trillcyborg"
+    },
+    "merkle_root": {
+      "ctime": 1534662382,
+      "hash": "6eee315a943cbd8c24450ba35bb30c00fb2dfff8fda618771c743d9218c4f493f420efb20d9359f2a01dd97f77572d3becced9655c3ad0daf91d8e781dc2e2b4",
+      "hash_meta": "474d41e5f36e0ceef0b7fc6f3e16d9468e8951eb621f64ca9a6883410d1ffe40",
+      "seqno": 3476905
+    },
+    "service": {
+      "entropy": "u0fuTXkc09AdFOlbQMtebLHx",
+      "hostname": "trxrg.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.5.0"
+  },
+  "ctime": 1534662395,
+  "expire_in": 504576000,
+  "prev": "1bffd42430c4d81cc54296123b1b02ae4da4d59554c4f05c2308400d5e912c58",
+  "seqno": 21,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgGn7y6K3q2Bl1i3vmCO/1EbAOFyuw/uGmmhK8Q+PTTBoKp3BheWxvYWTESpcCFcQgG//UJDDE2BzFQpYSOxsCrk2k1ZVUxPBcIwhADV6RLFjEIL3Wgi7FTSyHZZ/WuQSGX/cVy87+7VhNqrn4q5nt4ddtAgHCo3NpZ8RAXzokl61h/z6bIYVUvuyUGktdcQMY3tk/8B4TjwkzJDVevs+c8M5laUxpOJAKWiziTFGQx912PqG7Nayec2LYB6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIICu68gFgDndaTn9YYEZh1mbrikpgGwNOmbuH8Lmt+uWo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/trillcyborg
+
+==================================================================
