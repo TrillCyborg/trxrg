@@ -1,8 +1,11 @@
-import React from 'react'
+import React from "react"
 import styled from 'styled-components'
 import { Hero } from '../components/hero'
 import { ProjectItem } from '../components/content/project-item'
 import { PROJECT_LINKS, CONTACT } from '../consts'
+
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 import cosmo from '../images/cosmo.png'
 import cryptofighters from '../images/cryptofighters.png'
@@ -29,22 +32,19 @@ const EmailLink = styled.a`
   width: 100%;
 `;
 
-class IndexPage extends React.Component {
-  render() {
-    return (
-      <div>
-        <Hero />
-        <ProjectList>
-          {projects.map(({ pic, link }) => (
-            <ProjectItem pic={pic} link={link} />
-          ))}
-        </ProjectList>
-        <div style={{ width: '100%', textAlign: 'center', marginBottom: 75 }}>
-          <EmailLink href={`mailto://${CONTACT.email}`}>{CONTACT.email}</EmailLink>
-        </div>
-      </div>
-    )
-  }
-}
+const IndexPage = () => (
+  <Layout>
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <Hero />
+    <ProjectList>
+      {projects.map(({ pic, link }) => (
+        <ProjectItem pic={pic} link={link} />
+      ))}
+    </ProjectList>
+    <div style={{ width: '100%', textAlign: 'center', marginBottom: 75 }}>
+      <EmailLink href={`mailto://${CONTACT.email}`}>{CONTACT.email}</EmailLink>
+    </div>
+  </Layout>
+)
 
 export default IndexPage
