@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   align-items: center;
 
   @media (max-width: 509px) {
-    // height: calc(65vh - 107px);
+    /* height: calc(65vh - 107px); */
     
     height: 55vh;
     margin-bottom: 100px;
@@ -35,7 +35,7 @@ const IconWrapper = styled.div`
 
 export const Hero = () => (
   <Wrapper>
-    <div style={{ position: 'fixed' }}>
+    <div style={{ position: 'absolute' }}>
       <Title>Jason Werner</Title>
       <Subtitle>Full-Stack Developer</Subtitle>
       <IconWrapper>

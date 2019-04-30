@@ -30,27 +30,10 @@ const EmailLink = styled.a`
 `;
 
 class IndexPage extends React.Component {
-  state = { opacity: 1 }
-
-  componentDidMount() {
-    document.addEventListener('scroll', (e) => {
-      const scrollTop = e.target.scrollingElement.scrollTop
-      console.log(scrollTop)
-      this.setState({ opacity: 1 - (scrollTop) / 400 })
-    })
-  }
-
-  componentWillUnmount() {
-    this.container.removeEventListener('scroll')
-  }
-
   render() {
     return (
-      <div ref={(ref) => this.container = ref}>
-      <div style={{ opacity: this.state.opacity }}>
-
+      <div>
         <Hero />
-      </div>
         <ProjectList>
           {projects.map(({ pic, link }) => (
             <ProjectItem pic={pic} link={link} />
