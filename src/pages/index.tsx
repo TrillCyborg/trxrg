@@ -7,9 +7,9 @@ import { PROJECT_LINKS, CONTACT } from '../consts'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import cosmo from '../images/cosmo.png'
-import cryptofighters from '../images/cryptofighters.png'
-import cotrader from '../images/cotrader.png'
+const cosmo = require('../images/cosmo.png')
+const cryptofighters = require('../images/cryptofighters.png')
+const cotrader = require('../images/cotrader.png')
 
 const projects = [
   { name: 'cosmo', pic: cosmo, link: PROJECT_LINKS.cosmo },

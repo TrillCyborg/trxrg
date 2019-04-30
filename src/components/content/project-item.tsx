@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import Image from '../image'
 
 const Wrapper = styled(OutboundLink)`
   margin: 45px 24px;
@@ -14,8 +15,9 @@ const Wrapper = styled(OutboundLink)`
   }
 `
 
-export const ProjectItem = ({ link, pic }) => (
+export const ProjectItem = ({ link, pic }: any) => (
   <Wrapper href={link} target="_blank">
     <img src={pic} style={{ width: '100%', borderRadius: 8, marginBottom: -6 }} />
+    {/* <Image imgName={pic} style={{ width: '90vw', borderRadius: 8, marginBottom: -6 }} /> */}
   </Wrapper>
 )

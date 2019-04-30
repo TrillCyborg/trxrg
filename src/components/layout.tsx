@@ -14,7 +14,7 @@ import theme from '../theme'
 // import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => (
+const Layout = ({ children }: any) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -27,7 +27,6 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <ThemeProvider theme={theme}>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <div>
           <main>{children}</main>
         </div>
@@ -35,6 +34,8 @@ const Layout = ({ children }) => (
     )}
   />
 )
+
+// {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
