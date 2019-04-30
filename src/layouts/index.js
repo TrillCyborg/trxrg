@@ -13,12 +13,13 @@ const Layout = ({ children, data, location }) => (
       <Helmet
         title={data.site.siteMetadata.title}
         link={[
-          { href: 'https://fonts.googleapis.com/css?family=Maven+Pro|Roboto', rel: 'stylesheet' },
+          // { href: 'https://fonts.googleapis.com/css?family=Maven+Pro|Roboto', rel: 'stylesheet' },
+          { href: 'https://fonts.googleapis.com/css?family=Fira+Mono:400|Maven+Pro:400', rel: 'stylesheet' },
           { href: 'https://pro.fontawesome.com/releases/v5.2.0/css/all.css', rel: 'stylesheet', integrity: 'sha384-TXfwrfuHVznxCssTxWoPZjhcss/hp38gEOH8UPZG/JcXonvBQ6SlsIF49wUzsGno', crossorigin: 'anonymous' },
           // { href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', rel: 'stylesheet', integrity: 'sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin: 'anonymous' },
         ]}
       />
-      <Header siteTitle="TRXRG" path={location.pathname} />
+      {/* <Header siteTitle="TRXRG" path={location.pathname} /> */}
       <div>{children()}</div>
     </div>
   </ThemeProvider>

@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   max-width: 960px;
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
-  height: calc(80vh - 107px);
+  height: calc(100vh - 130px);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -25,15 +25,25 @@ const Wrapper = styled.div`
   }
 `
 
+const IconWrapper = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: -49px;
+`;
+
 export const Hero = () => (
   <Wrapper>
-    <Title>Jason Werner</Title>
-    <Subtitle>Full-Stack Developer</Subtitle>
-    <div>
-      <HeroIcon icon="fab fa-github" link={LINKS.github} />
-      <HeroIcon icon="fab fa-linkedin-in" link={LINKS.linkedin} />
-      <HeroIcon icon="fab fa-medium-m" link={LINKS.medium} />
-      <HeroIcon icon="fab fa-twitter" link={LINKS.twitter} />
+    <div style={{ position: 'fixed' }}>
+      <Title>Jason Werner</Title>
+      <Subtitle>Full-Stack Developer</Subtitle>
+      <IconWrapper>
+        <HeroIcon icon="fab fa-github" link={LINKS.github} />
+        <HeroIcon icon="fab fa-linkedin-in" link={LINKS.linkedin} />
+        <HeroIcon icon="fab fa-medium-m" link={LINKS.medium} />
+        <HeroIcon icon="fab fa-twitter" link={LINKS.twitter} />
+      </IconWrapper>
     </div>
   </Wrapper>
 )
