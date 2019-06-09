@@ -11,6 +11,7 @@ export const CONTACT = {
 }
 
 export const PROJECT_LINKS = {
+  swish: 'https://swish.is',
   cosmo: 'https://cosmoapp.io',
   cryptofighters: 'https://cryptofighters.io',
   cotrader: 'https://cotrader.com'

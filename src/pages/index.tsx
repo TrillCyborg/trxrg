@@ -7,11 +7,13 @@ import { PROJECT_LINKS, CONTACT } from '../consts'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+const swish = require('../images/swish.png')
 const cosmo = require('../images/cosmo.png')
 const cryptofighters = require('../images/cryptofighters.png')
 const cotrader = require('../images/cotrader.png')
 
 const projects = [
+  { name: 'swish', pic: swish, link: PROJECT_LINKS.swish },
   { name: 'cosmo', pic: cosmo, link: PROJECT_LINKS.cosmo },
   { name: 'cryptofighters', pic: cryptofighters, link: PROJECT_LINKS.cryptofighters },
   // { name: 'cotrader', pic: cotrader, link: PROJECT_LINKS.cotrader },
