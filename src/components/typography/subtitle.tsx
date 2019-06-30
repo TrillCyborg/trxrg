@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 export const Subtitle = styled.h5`
   /* font-family: Roboto; */

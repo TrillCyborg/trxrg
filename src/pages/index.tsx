@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { Hero } from '../components/hero'
 import { Header } from '../components/header'
 import { ProjectItem } from '../components/content/project-item'
@@ -24,10 +24,10 @@ const headerItems = [
   { name: 'BLOG', path: '/blog' },
 ]
 
-const swish = require('../images/swish.png')
-const cosmo = require('../images/cosmo.png')
-const cryptofighters = require('../images/cryptofighters.png')
-const cotrader = require('../images/cotrader.png')
+const swish = require('../assets/images/swish.png')
+const cosmo = require('../assets/images/cosmo.png')
+const cryptofighters = require('../assets/images/cryptofighters.png')
+const cotrader = require('../assets/images/cotrader.png')
 
 const projects = [
   { name: 'swish', pic: swish, link: PROJECT_LINKS.swish },

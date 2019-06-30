@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 // import Image from '../image'
 

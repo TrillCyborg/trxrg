@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 export const FooterItem = styled.p`
   font-family: Roboto;
