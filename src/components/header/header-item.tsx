@@ -17,16 +17,20 @@ const Wrapper = styled.div`
 const ActiveLine = styled.div`
   width: 100%;
   height: 2px;
-  background-color: #6202EE;
+  background-color: #6202ee;
   position: relative;
   top: 25px;
 `
 
-export const HeaderItem = ({ label, active, to }) => (
+export const HeaderItem = ({ label, active, to }: any) => (
   <Wrapper>
-    <Link style={{ textDecoration: 'none', marginTop: active ? 2 : 0 }} activeStyle={{ textDecoration: 'none' }} to={to}>
+    <Link
+      style={{ textDecoration: 'none', marginTop: active ? 2 : 0 }}
+      activeStyle={{ textDecoration: 'none' }}
+      to={to}
+    >
       <Font>{label}</Font>
-    </Link>   
+    </Link>
     {active ? <ActiveLine /> : null}
   </Wrapper>
 )
