@@ -17,9 +17,8 @@ const Wrapper = styled.div`
   align-items: center;
 
   @media (max-width: 509px) {
-    /* height: calc(65vh - 107px); */
-    
-    height: 55vh;
+    height: calc(55vh + 72px);
+    /* height: 55vh; */
     margin-bottom: 100px;
     justify-content: flex-end;
   }

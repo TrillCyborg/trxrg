@@ -20,14 +20,11 @@ const keywords = [
   `developer`,
 ]
 
-const headerItems = [
-  { name: 'BLOG', path: '/blog' },
-]
+const headerItems = [{ label: 'BLOG', to: '/blog' }]
 
 const swish = require('../assets/images/swish.png')
 const cosmo = require('../assets/images/cosmo.png')
 const cryptofighters = require('../assets/images/cryptofighters.png')
-const cotrader = require('../assets/images/cotrader.png')
 
 const projects = [
   { name: 'swish', pic: swish, link: PROJECT_LINKS.swish },
@@ -37,7 +34,6 @@ const projects = [
     pic: cryptofighters,
     link: PROJECT_LINKS.cryptofighters,
   },
-  // { name: 'cotrader', pic: cotrader, link: PROJECT_LINKS.cotrader },
 ]
 
 const ProjectList = styled.div`

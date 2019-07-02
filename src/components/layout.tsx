@@ -27,7 +27,7 @@ const Layout = ({ children }: any) => (
     `}
     render={data => (
       <ThemeProvider theme={theme}>
-        <div>
+        <div style={{ backgroundColor: theme.colors.dark.background }}>
           <main>{children}</main>
         </div>
       </ThemeProvider>

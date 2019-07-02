@@ -1,17 +1,19 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { fontSize, FontSizeProps, marginLeft, MarginLeftProps, marginRight, MarginRightProps } from 'styled-system'
 import Link from 'gatsby-link'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { HeaderItem as Font } from '../typography/header-item'
 
+const ICON_SIZE = 24
+
 const Wrapper = styled.div`
-  margin-left: 30px;
-  margin-right: 30px;
   height: 100%;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   flex-direction: column;
   user-select: none;
+  cursor: pointer;
 `
 
 const ActiveLine = styled.div`
@@ -22,15 +24,46 @@ const ActiveLine = styled.div`
   top: 25px;
 `
 
-export const HeaderItem = ({ label, active, to }: any) => (
+const HeaderLink = styled(Link)<{ active?: boolean }>`
+  text-decoration: none;
+  margin-top: ${props => (props.active ? 2 : 0)}px;
+  height: ${ICON_SIZE}px;
+  box-sizing: content-box;
+`
+
+const Icon = styled.i<FontSizeProps & MarginLeftProps & MarginRightProps>`
+  ${fontSize}
+  ${marginLeft}
+  ${marginRight}
+  color: #fff;
+`
+
+export interface HeaderItemProps {
+  icon?: string
+  label: string
+  active?: boolean
+  to: string
+  outbound?: boolean
+  style?: any
+}
+
+type Props = HeaderItemProps & MarginLeftProps & MarginRightProps
+
+export const HeaderItem = ({ icon, label, active, outbound, to, ml, mr}: Props) => (
   <Wrapper>
-    <Link
-      style={{ textDecoration: 'none', marginTop: active ? 2 : 0 }}
-      activeStyle={{ textDecoration: 'none' }}
-      to={to}
-    >
-      <Font>{label}</Font>
-    </Link>
+    {outbound ? (
+      <OutboundLink href={to} target="_blank">
+        <Icon ml={ml} mr={mr} fontSize={[18, 24]} className={icon} />
+      </OutboundLink>
+    ) : (
+      <HeaderLink activeStyle={{ textDecoration: 'none' }} to={to}>
+        {icon ? (
+          <Icon ml={ml} mr={mr} fontSize={[18, 24]} className={icon} />
+        ) : (
+          <Font>{label}</Font>
+        )}
+      </HeaderLink>
+    )}
     {active ? <ActiveLine /> : null}
   </Wrapper>
 )

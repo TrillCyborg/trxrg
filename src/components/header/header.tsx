@@ -1,43 +1,53 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { HeaderItem } from './header-item'
-
-interface HeaderItem {
-  name: string
-  path: string
-}
+import { Box } from 'rebass'
+import { HeaderItem, HeaderItemProps } from './header-item'
 
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   position: absolute;
-  background-color: rgba(0,0,0,0.04);
   margin-bottom: 1.45rem;
   margin-top: 1.45rem;
-
-  @media (max-width: 509px) {
-    display: none;
-  }
 `
 
-export const HeaderItemList = styled.div`
+const Inner = styled.div<{ reverse?: boolean }>`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  ${props => props.reverse ? '' : 'justify-content: flex-end;' }
+`
+
+export const HeaderItemList = styled(Box)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 22px;
-  margin-right: 22px;
 `
 
-export const Header = (props: { items: HeaderItem[] }) => (
-  <Wrapper>
-    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-      <HeaderItemList>
-        {props.items.map(item => (
-          <HeaderItem label={item.name} to={item.path} />
-        ))}
-      </HeaderItemList>
-    </div>
+interface HeaderProps {
+  items?: HeaderItemProps[]
+  itemsArray?: Array<HeaderItemProps[]>
+  reverse?: boolean
+  style?: any
+}
+
+export const Header = (props: HeaderProps) => (
+  <Wrapper style={props.style}>
+    <Inner reverse={props.reverse}>
+      {!!props.itemsArray ? (
+        <div style={{ width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'row', justifyContent: 'space-between' }}>
+          {props.itemsArray.map(itemList => (
+            <HeaderItemList mx={[32, 52]}>
+              {itemList!.map(item => <HeaderItem {...item} />)}
+            </HeaderItemList>
+          ))}  
+        </div>
+      ) : (
+        <HeaderItemList mx={[32, 52]}>
+          {props.items!.map(item => <HeaderItem {...item} />)}
+        </HeaderItemList>
+      )}
+    </Inner>
   </Wrapper>
 )
