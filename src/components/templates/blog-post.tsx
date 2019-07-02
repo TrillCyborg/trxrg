@@ -13,11 +13,6 @@ const headerItems = [
   ]
 ]
 
-// <HeroIcon icon="fab fa-github" link={LINKS.github} />
-// <HeroIcon icon="fab fa-linkedin-in" link={LINKS.linkedin} />
-// <HeroIcon icon="fab fa-medium-m" link={LINKS.medium} />
-// <HeroIcon icon="fab fa-twitter" link={LINKS.twitter} />
-
 const keywords = [
   `jason werner`,
   `trillcyborg`,
