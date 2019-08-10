@@ -76,7 +76,7 @@ export const BlogItem = (props: BlogItemProps) => {
                 {props.frontmatter.tags.map(tag => `#${tag} `)}
               </Tags>
               <SubText>
-                {moment(props.frontmatter.date, 'mm/dd/yyyy').calendar()}
+                {moment(props.frontmatter.date, 'YYYY/MM/DD').format('MM/DD/YYYY')}
               </SubText>
             </Flex>
           </Box>

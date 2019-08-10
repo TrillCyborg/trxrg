@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import { orderBy } from 'lodash'
 import styled from '@emotion/styled'
 import { Flex } from 'rebass'
 import Layout from '../../components/layout'
@@ -53,7 +54,7 @@ const BlogPage = (props: {
           flexDirection="column"
           style={{ position: 'relative', top: -140 }}
         >
-          {posts.map(post => (
+          {orderBy(posts, 'frontmatter.date', 'desc').map(post => (
             <BlogItem key={post.id} location={props.location} {...post} />
           ))}
         </Flex>
