@@ -6,6 +6,7 @@ import { Header } from '../components/header'
 import { Layout } from '../components/layout'
 import { ProjectItem } from '../components/content/project-item'
 import { FadeInUp } from '../components/animations/fade-in-up'
+import { WebRing } from '../components/web-ring'
 import { PROJECT_LINKS, CONTACT, SITE_METADATA } from '../consts'
 
 
@@ -67,8 +68,11 @@ const IndexPage = () => (
             <ProjectItem key={name} pic={pic} link={link} />
           ))}
         </ProjectList>
-        <div style={{ width: '100%', textAlign: 'center', marginBottom: 75 }}>
+        <div style={{ width: '100%', textAlign: 'center', marginBottom: 50 }}>
           <EmailLink href={`mailto://${CONTACT.email}`} rel="me">{CONTACT.email}</EmailLink>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 75 }}>
+          <WebRing />
         </div>
       </FadeInUp>
     </Layout>
