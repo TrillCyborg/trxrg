@@ -39,12 +39,12 @@ export const Hero = () => (
       <HCard>
         <HCard.Url url={CONTACT.website}>
           <HCard.Name>
-            <Title>Jason Werner</Title>
+            <Title>{CONTACT.name}</Title>
           </HCard.Name>
           <HCard.Photo src={CONTACT.photo} hide />
         </HCard.Url>
         <HCard.JobTitle>
-          <Subtitle>Full-Stack Developer</Subtitle>
+          <Subtitle>{CONTACT.jobTitle}</Subtitle>
         </HCard.JobTitle>
         <HCardLinks>
           <HeroIcon icon="fab fa-github" link={LINKS.github} />

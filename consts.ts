@@ -6,10 +6,12 @@ export const LINKS = {
 }
 
 export const CONTACT = {
+  name: 'Jason Werner',
   website: 'https://trxrg.com',
   email: 'jason@trxrg.com',
   telegram: 't.me/trillcyborg',
   photo: '/static/images/me.jpg',
+  jobTitle: 'Full-Stack Developer',
 }
 
 export const PROJECT_LINKS = {
