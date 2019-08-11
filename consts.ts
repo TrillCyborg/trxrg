@@ -6,8 +6,10 @@ export const LINKS = {
 }
 
 export const CONTACT = {
+  website: 'https://trxrg.com',
   email: 'jason@trxrg.com',
   telegram: 't.me/trillcyborg',
+  photo: '/static/images/me.jpg',
 }
 
 export const PROJECT_LINKS = {

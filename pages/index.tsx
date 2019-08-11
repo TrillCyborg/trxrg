@@ -9,7 +9,6 @@ import { FadeInUp } from '../components/animations/fade-in-up'
 import { WebRing } from '../components/web-ring'
 import { PROJECT_LINKS, CONTACT, SITE_METADATA } from '../consts'
 
-
 const keywords = [
   `jason werner`,
   `trillcyborg`,
