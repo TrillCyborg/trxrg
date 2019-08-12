@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "export": "npm run build && next export",
     "start": "next start"
   },
   "dependencies": {
@@ -23,6 +24,7 @@
     "react-dom": "^16.9.0",
     "react-ga": "^2.6.0",
     "rebass": "^4.0.2",
+    "showdown": "^1.9.0",
     "styled-system": "^4.1.0",
     "theme-ui": "^0.2.31"
   },

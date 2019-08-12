@@ -6,8 +6,10 @@ export type BlogPost = {
   image?: string
   publishedAt: string
   published: boolean
+  micro: boolean
   path: string
-  tags: string[]
+  tags?: string[]
+  exportHtml?: boolean
 };
 
 const posts: Array<BlogPost> = preval`

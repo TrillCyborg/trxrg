@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { LINKS, CONTACT } from '../../consts'
+import { CONTACT } from '../../consts'
 import { Title } from '../typography/title'
 import { Subtitle } from '../typography/subtitle'
 import { HeroIcon } from './hero-icon'
-import { HCard } from './h-card'
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -25,7 +24,7 @@ const Wrapper = styled.div`
   }
 `
 
-const HCardLinks = styled.div`
+const Links = styled.div`
   position: absolute;
   left: 0;
   right: 0;
@@ -36,23 +35,14 @@ const HCardLinks = styled.div`
 export const Hero = () => (
   <Wrapper>
     <div style={{ position: 'absolute' }}>
-      <HCard>
-        <HCard.Url url={CONTACT.website}>
-          <HCard.Name>
-            <Title>{CONTACT.name}</Title>
-          </HCard.Name>
-          <HCard.Photo src={CONTACT.photo} hide />
-        </HCard.Url>
-        <HCard.JobTitle>
-          <Subtitle>{CONTACT.jobTitle}</Subtitle>
-        </HCard.JobTitle>
-        <HCardLinks>
-          <HeroIcon icon="fab fa-github" link={LINKS.github} />
-          <HeroIcon icon="fab fa-linkedin-in" link={LINKS.linkedin} />
-          <HeroIcon icon="fab fa-medium-m" link={LINKS.medium} />
-          <HeroIcon icon="fab fa-twitter" link={LINKS.twitter} />
-        </HCardLinks>
-      </HCard>
+      <Title>{CONTACT.name}</Title>
+      <Subtitle>{CONTACT.jobTitle}</Subtitle>
+      <Links>
+        <HeroIcon icon="fab fa-github" link={CONTACT.github} />
+        <HeroIcon icon="fab fa-linkedin-in" link={CONTACT.linkedin} />
+        <HeroIcon icon="fab fa-medium-m" link={CONTACT.medium} />
+        <HeroIcon icon="fab fa-twitter" link={CONTACT.twitter} />
+      </Links>
     </div>
   </Wrapper>
 )

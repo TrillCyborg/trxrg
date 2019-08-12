@@ -26,7 +26,6 @@ const TitleWrapper = styled.div`
 
 const BlogPage = () => {
   const posts: BlogPost[] = blogposts
-  console.log('posts', posts)
   return (
     <>
       <Head>

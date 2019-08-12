@@ -88,7 +88,7 @@ export const BlogPost = (props: BlogPostProps) => {
         <Header itemsArray={headerItems} reverse style={{ position: 'absolute', top: 0 }} />
         <OuterWrapper>
           <InnerWrapper>
-            {children}
+            {children.slice(1, children.length - 1)}
           </InnerWrapper>
         </OuterWrapper>
       </Layout>
