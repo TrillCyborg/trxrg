@@ -27,6 +27,11 @@ const SITE_METADATA = {
 
 const PROJECTS = [
   {
+    name: "super",
+    pic: "/static/images/super.png",
+    link: "https://super.so"
+  },
+  {
     name: "swish",
     pic: "/static/images/swish.png",
     link: "https://swish.is"
