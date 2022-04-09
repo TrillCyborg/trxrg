@@ -18,7 +18,7 @@
     "@theme-ui/typography": "^0.2.29",
     "@zeit/next-css": "^1.0.1",
     "dotenv": "^8.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "next": "^9.0.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
